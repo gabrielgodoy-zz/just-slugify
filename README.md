@@ -10,10 +10,19 @@
 `npm run test:watch` To run tests in watch mode
 
 ## Usage
-
+Node
 ```js
-slugify("Some string that needs to be slugified")
+const slugify = require('just-slugify')
 
+slugify("Some string that needs to be slugified")
+// some-string-that-needs-to-be-slugified
+```
+
+ES6 modules
+```js
+import slugify from 'just-slugify'
+
+slugify("Some string that needs to be slugified")
 // some-string-that-needs-to-be-slugified
 ```
 
