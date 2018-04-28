@@ -1,3 +1,7 @@
+/**
+ * Slugifies a string
+ * @param {string} string - String to be slugified
+ */
 module.exports = string => {
   let str = string.replace(/^\s+|\s+$/g, '').toLowerCase();
 
