@@ -4,16 +4,33 @@
   "description": "Slugifies some string",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint **/*.js",
+    "test": "jasmine \"./{,!(node_modules)/**/}*.test.js\"",
+    "test:watch": "nodemon --exec 'npm test'"
   },
-  "keywords": [
-    "slug",
-    "slugify"
-  ],
+  "keywords": ["slug", "slugify"],
   "author": "Gabriel Godoy",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/gabrielgodoy/just-slugify.git"
+  },
+  "eslintConfig": {
+    "extends": "google",
+    "parserOptions": {
+      "ecmaVersion": 6
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "husky": "^0.14.3",
+    "jasmine": "^3.1.0",
+    "nodemon": "^1.17.3"
   }
 }

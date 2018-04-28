@@ -1,8 +1,15 @@
 /**
  * Slugifies a string
  * @param {string} string - String to be slugified
+ * @return {string}
  */
-module.exports = string => {
+module.exports = (string) => {
+  if (typeof string !== 'string') {
+    throw new TypeError(
+      'Slugify function must receive a string as a parameter!'
+    );
+  }
+
   let str = string.replace(/^\s+|\s+$/g, '').toLowerCase();
 
   const from = 'àáäâãèéëêìíïîõòóöôùúüûñç·/_,:;';
