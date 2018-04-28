@@ -22,7 +22,8 @@ module.exports = (string) => {
   str = str
     .replace(/[^a-z0-9 -]/g, '')
     .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
+    .replace(/-+/g, '-')
+    .replace(/\-$/, '');
 
   return str;
 };

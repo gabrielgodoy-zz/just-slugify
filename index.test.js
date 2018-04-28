@@ -15,4 +15,11 @@ describe('Slugify', function() {
 
     expect(() => slugify(input)).toThrowError(errorMessage);
   });
+
+  it('should ignore special characters', () => {
+    const input = 'ˆ%$ˆsOME, string :)))!@#$%^ˆ*';
+    const output = 'some-string';
+
+    expect(slugify(input)).toEqual(output);
+  });
 });

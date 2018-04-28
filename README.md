@@ -3,6 +3,12 @@
 [![npm](https://img.shields.io/npm/v/just-slugify.svg)](https://www.npmjs.com/package/just-slugify)
 
 
+## Commands
+
+`npm run lint` to run eslint
+
+`npm run test:watch` To run tests in watch mode
+
 ## Usage
 
 ```js
