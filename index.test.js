@@ -22,4 +22,8 @@ describe('Slugify', function() {
 
     expect(slugify(input)).toEqual(output);
   });
+
+  it('should return an empty string if no argument passed', () => {
+    expect(slugify()).toEqual('');
+  });
 });
